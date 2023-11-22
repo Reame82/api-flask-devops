@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Mouse') {
             steps {
-                echo 'Pietro Reame'
+                echo 'Pietro Reame Vichiatto'
                 sh 'docker pull nginx'
             }
         }

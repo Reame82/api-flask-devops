@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Image Build') {
             steps {
-                echo 'docker_registry: $DOCKER_IMAGE'
+                echo "docker_registry: $DOCKER_IMAGE"
             }
         }
         

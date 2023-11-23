@@ -22,7 +22,7 @@ pipeline {
         stage('Image Push') {
             steps {
                 echo "fazendo o push da imagem : $DOCKER_IMAGE"
-                
+                sh "docker tag api-flask $DOCKER_IMAGE"
                 sh "docker push $DOCKER_IMAGE"
             
             }

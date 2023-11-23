@@ -30,6 +30,7 @@ pipeline {
 
         stage('Image Run') {
             steps {
+                sh "touch .env"
                 echo "rodando a imagem: $DOCKER_IMAGE"
                 echo "DOCKER_IMAGE=$DOCKER_IMAGE >> .env"
                 echo "CONTAINER_NAME=api-flask-prod >> .env"

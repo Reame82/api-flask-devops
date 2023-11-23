@@ -1,19 +1,22 @@
+// 1. Buildar a imagem 
+// 2. Fazer o push da imagem para o Docker Hub
+// 3. Rodar a imagem na maquina
+
 pipeline {
     agent {
         label 'pietro'
     }
 
+    environment {
+        DOCKER_IMAGE = "${DOCKER_REGISTRY}"
+    }
+
     stages {
-        stage('Hello') {
+        stage('Image Build') {
             steps {
-                echo 'Hello World'
+                echo 'docker_registry: $DOCKER_REGISTRY'
             }
         }
-        stage('Mouse') {
-            steps {
-                echo 'Pietro Reame'
-                sh 'docker pull nginx'
-            }
-        }
+        
     }
 }

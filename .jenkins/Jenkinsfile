@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE = "${DOCKER_REGISTRY}/api-flask:${BRANCH_NAME}-${BUILD_NUMBER}"
+        DOCKER_IMAGE = "${DOCKER_REGISTRY}/api-flask:${BUILD_NUMBER}"
     }
 
     stages {

@@ -18,6 +18,15 @@ pipeline {
                 sh "docker build -t $DOCKER_IMAGE --no-cache -f Dockerfile ."
             }
         }
-        
+
+        stage('Image Push') {
+            steps {
+                echo "fazendo o push da imagem : $DOCKER_IMAGE"
+                
+                sh "docker push $DOCKER_IMAGE"
+            
+            }
+        }
+
     }
 }
